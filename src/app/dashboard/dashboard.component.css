@@ -1,0 +1,16 @@
+.dashButton{
+  font-family: fantasy;
+  font-size: 55px;
+  background-color: #f4c184;
+  text-align: -webkit-center;
+  margin: 120px 675px 0px 100px;
+  padding: 9px;
+}
+.dashSubText{
+  font-family: monospace;
+font-size: 32px;
+background-color: #f4c184;
+text-align: -webkit-center;
+margin: 20px 600px 0px 260px;
+padding: 0px
+}

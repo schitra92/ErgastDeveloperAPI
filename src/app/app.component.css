@@ -1,0 +1,12 @@
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+.custNav{
+  background-color: #442218!important;
+}
+.dashNav{
+    padding: 0px 54px 0px 54px;
+    border-right: 1px solid #773e2d;
+}
+.routLinks{
+  color: #ffc107;
+   text-decoration: none;
+}

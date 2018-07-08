@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col">
+    <p class="info">Clicking on the year from the dropdown shows the list of the winners for every race for
+the selected year</p>
+  </div>
+  </div>
+
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-light buttonSpace"  id="dropdownBasic1" ngbDropdownToggle>Select Year</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item" *ngFor="let year of years" (click)="getData(year.value)">{{year.value}}</button>
+      </div>
+    </div>
+  </div>
+  </div>
+<div >
+  <div class="m-t-1">
+    <table class="table table-striped custTablee">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Series</th>
+          <th scope="col">Season</th>
+          <th scope="col">Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{raceData.series}}</td>
+          <td>{{raceData.RaceTable.season}}</td>
+          <td>{{raceData.RaceTable.position}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngFor="let winner of winners">
+    <table class="table table-striped custTablee" >
+      <thead class="thead-dark" >
+        <tr>
+          <th scope="Col" colspan="3" >Race Result<br />
+            {{raceData.RaceTable.season+" "+ winner.raceName}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <table class="table table-striped custTablee">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Position</th>
+                    <th scope="col">Driver</th>
+                        <th scope="col">Laps</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> 1</td>
+                  <td> {{winner.Results["0"].Driver.givenName+ " " +winner.Results["0"].Driver.familyName}}</td>
+                  <td> {{winner.Results["0"].laps}}</td>
+                  <td> {{winner.Results["0"].Time.time}}</td>
+                  <td> {{winner.Results["0"].points}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<!-- .MRData.RaceTable.Races["0"].Results["0"].Driver.givenName -->
+	</div>
+</div>

@@ -1,0 +1,26 @@
+.custTablee{
+  width: 90%;
+max-width: 90%;
+margin: 60px;
+background-color: #fff;
+        margin: 8px auto 10px auto;
+}
+.table thead th {
+    vertical-align: bottom;
+    padding: 5px 12px;
+    text-align: -webkit-center;
+  }
+
+  .table td, .table th {
+      text-align: -webkit-center;
+      border-bottom: 1px solid #e2dfdf;
+    }
+    .buttonSpace{
+      margin: 24px 70px;
+    }
+.info{
+  background-color: #fff3dd;
+margin: 15px 70px;
+padding: 15px;
+text-align: -webkit-center;
+}

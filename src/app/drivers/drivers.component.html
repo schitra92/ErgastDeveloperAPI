@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-light buttonSpace"  id="dropdownBasic1" ngbDropdownToggle>Select Year</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item" *ngFor="let year of years" (click)="onChange(year.value)">{{year.value}}</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div>
+  <table class="table table-striped custTable">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Permanent Number</th>
+        <th scope="col">Nationality</th>
+        <th scope="col">Date Of Birth</th>
+        <th scope="col">url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of myData">
+        <td>{{post.givenName +" "+ post.familyName}}</td>
+          <td>  {{post.permanentNumber}}</td>
+            <td>   {{post.nationality}}</td>
+              <td>    {{post.dateOfBirth}}</td>
+                <td> <a href={{post.url}}>Biography</a> </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
