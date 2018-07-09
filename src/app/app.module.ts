@@ -9,9 +9,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes : Routes=[
+  { path: '', component: DashboardComponent},
   { path: 'drivers', component: DriversComponent},
   { path: 'winner', component: WinnerComponent},
-  { path: 'dashboard', component: DashboardComponent}
 ];
 @NgModule({
   declarations: [
